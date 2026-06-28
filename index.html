@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Looking for Rescue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app" id="app">
+    <main class="main-screen">
+      <img class="bg" src="locations/map.png" alt="Map" />
+      <img id="pinAirport" src="locations/pin_airport.png" style="display:none; position:absolute; left:1250px; top:711px; transform:translate(-50%, -50%);" />
+      <img id="pinPoor" src="locations/pin_poor.png" style="display:none; position:absolute; left:1290px; top:360px; transform:translate(-50%, -50%);" />
+      <img id="pinFib" src="locations/pin_fib.png" style="display:none; position:absolute; left:1031px; top:567px; transform:translate(-50%, -50%);" />
+      <img id="pinRich" src="locations/pin_rich.png" style="display:none; position:absolute; left:652px; top:285px; transform:translate(-50%, -50%);" />
+      <img id="pinBallas" src="locations/pin_ballas.png" style="display:none; position:absolute; left:1848px; top:549px; transform:translate(-50%, -50%);" />
+      <img id="pinCityHall" src="locations/pin_cityhall.png" style="display:none; position:absolute; left:1270px; top:420px; transform:translate(-50%, -50%);" />
+      <div class="center-title hidden" id="mainTitle">Looking for Rescue</div>
+      <div id="battleScreen">
+      <!-- ПОЛЕ БОЯ -->
+      <img id="battlefield" style="display:none; position:absolute; left:1000px; top:500px; transform:translate(-50%, -50%);" />
+      <!-- ВРАГИ -->
+      <img id="firstPosEnemy" class="enemy" style="display:none; position:absolute; left:1510px; top:600px; transform:translate(-50%, -50%);" />
+      <div id="firstPosEnemyHp" class="hp-text">100/100</div>
+      <img id="secondPosEnemy" class="enemy" style="display:none; position:absolute; left:1290px; top:575px; transform:translate(-50%, -50%);" />
+      <div id="secondPosEnemyHp" class="hp-text">100/100</div>
+      <img id="thirdPosEnemy" class="enemy" style="display:none; position:absolute; left:1400px; top:680px; transform:translate(-50%, -50%);" />
+      <div id="thirdPosEnemyHp" class="hp-text">100/100</div>
+       <!-- СОЮЗНИКИ -->
+      <img id="firstPos" class="ally" style="display:none; position:absolute; left:600px; top:650px; transform:translate(-50%, -50%);" />
+      <div id="firstPosHp" class="hp-text">100/100</div>
+      <img id="secondPos" class="ally" style="display:none; position:absolute; left:775px; top:680px; transform:translate(-50%, -50%);" />
+      <div id="secondPosHp" class="hp-text">100/100</div>
+      <img id="thirdPos" class="ally" style="display:none; position:absolute; left:900px; top:600px; transform:translate(-50%, -50%);" />
+      <div id="thirdPosHp" class="hp-text">100/100</div>
+    </div>
+    <div id="battleButtons"></div>
+    </main>
+
+    <aside class="info-panel">
+      <img class="info-image" id="infoImage" src="Bruno/bruno0.jpg" alt="infoI" />
+      <div class="info-text" id="infoText">Пропущенный звонок</div>
+      <div class="buttons" id="actionButtons">
+        <button class="btn" id="voiceBtn">Послушать голосовое</button>
+      </div>
+    </aside>
+  </div>
+
+    <script src="stats.js"></script>
+    <script src="battle.js"></script>
+    <script src="Team/faction.js"></script>
+    <script src="game.js"></script>
+    
+</body>
+</html>

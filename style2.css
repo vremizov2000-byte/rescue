@@ -1,0 +1,315 @@
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+
+  width:100%;
+  height:100%;
+
+  margin:0;
+  padding:0;
+
+  overflow:hidden;
+
+  background:#000;
+
+  font-family:Arial,sans-serif;
+}
+
+/* ===================================
+   ВСЯ ИГРА
+=================================== */
+
+.app{
+
+  width:100vw;
+  height:100vh;
+
+  display:flex;
+
+  background:#000;
+}
+
+/* ===================================
+   ГЛАВНЫЙ ЭКРАН
+=================================== */
+
+.main-screen{
+
+  position:relative;
+
+  width:calc(100vw - 432px);
+  height:100vh;
+
+  overflow:hidden;
+
+  background:#111;
+
+  border-right:3px solid #222;
+
+  box-shadow:
+    inset 0 0 120px rgba(0,0,0,0.7);
+}
+
+/* ===================================
+   КАРТА
+=================================== */
+
+.bg{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  filter:
+    brightness(0.92)
+    contrast(1.05);
+}
+
+/* ===================================
+   PIN
+=================================== */
+
+.pin{
+
+  position:absolute;
+
+  width:140px;
+  height:auto;
+
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
+
+  filter:
+    drop-shadow(0 0 10px rgba(0,0,0,0.9));
+}
+
+.pin:hover{
+
+  transform:scale(1.08);
+}
+
+/* ===================================
+   РАСПОЛОЖЕНИЕ PIN
+=================================== */
+
+.pin-airport{
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%, -50%);
+
+  width:170px;
+}
+
+.pin-poor{
+
+  left:3%;
+  top:4%;
+}
+
+.pin-fib{
+
+  right:3%;
+  bottom:4%;
+}
+
+.pin-rich{
+
+  left:3%;
+  bottom:4%;
+}
+
+.pin-ballas{
+
+  right:3%;
+  top:4%;
+}
+
+/* ===================================
+   ТЕКСТ В ЦЕНТРЕ
+=================================== */
+
+.center-title{
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%, -50%);
+
+  color:#fff;
+
+  font-size:58px;
+  font-weight:700;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,1),
+    0 0 30px rgba(0,0,0,1);
+
+  letter-spacing:2px;
+
+  text-align:center;
+}
+
+/* ===================================
+   ПРАВАЯ ПАНЕЛЬ
+=================================== */
+
+.info-panel{
+
+  width:432px;
+  height:100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #181818,
+      #111
+    );
+
+  color:#fff;
+
+  padding:20px;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+
+  gap:20px;
+
+  border-left:
+    3px solid #2b2b2b;
+
+  box-shadow:
+    inset 0 0 30px rgba(255,255,255,0.03);
+}
+
+/* ===================================
+   ПОРТРЕТ
+=================================== */
+
+.bruno-image{
+
+  width:100%;
+  max-width:390px;
+
+  border-radius:14px;
+
+  object-fit:cover;
+
+  border:
+    2px solid #333;
+
+  box-shadow:
+    0 0 20px rgba(0,0,0,0.6);
+}
+
+/* ===================================
+   ТЕКСТ
+=================================== */
+
+.info-text{
+
+  width:100%;
+
+  font-size:24px;
+
+  line-height:1.5;
+
+  text-align:center;
+
+  color:#f0f0f0;
+
+  white-space:pre-wrap;
+
+  text-shadow:
+    0 0 8px rgba(0,0,0,0.8);
+}
+
+/* ===================================
+   КНОПКИ
+=================================== */
+
+.buttons{
+
+  width:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+
+  margin-top:auto;
+
+  padding-bottom:12px;
+}
+
+.btn{
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2d2d2d,
+      #1a1a1a
+    );
+
+  color:#fff;
+
+  font-size:22px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:
+    transform 0.15s,
+    background 0.2s,
+    box-shadow 0.2s;
+
+  box-shadow:
+    0 0 10px rgba(0,0,0,0.5);
+}
+
+.btn:hover{
+
+  background:
+    linear-gradient(
+      180deg,
+      #3b3b3b,
+      #232323
+    );
+
+  box-shadow:
+    0 0 18px rgba(255,255,255,0.08);
+}
+
+.btn:active{
+
+  transform:scale(0.97);
+}
+
+/* ===================================
+   HIDDEN
+=================================== */
+
+.hidden{
+
+  display:none;
+}
