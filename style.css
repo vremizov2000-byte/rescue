@@ -86,7 +86,7 @@ body {
 
 /* Правая панель */
 .info-panel {
-  position: right;
+  position: absolute;
   right: 0;
   top: 0;
   width: 432px;
