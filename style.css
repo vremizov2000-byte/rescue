@@ -27,7 +27,7 @@ body {
 /* Левая игровая зона */
 .main-screen {
   position: relative;
-  width: calc(100vw - 432px);
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background: #111;
