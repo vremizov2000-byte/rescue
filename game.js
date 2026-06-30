@@ -15,6 +15,16 @@ const pinFib = document.getElementById('pinFib');
 const pinRich = document.getElementById('pinRich');
 const pinBallas = document.getElementById('pinBallas');
 
+function resizeApp() {
+  const app = document.getElementById('app');
+  const scaleX = window.innerWidth / 1920;
+  const scaleY = window.innerHeight / 1080;
+  const scale = Math.min(scaleX, scaleY);
+  app.style.transform = `scale(${scale})`;
+}
+window.addEventListener('resize', resizeApp);
+resizeApp();
+
 function clearButtons() {
   actionButtons.innerHTML = '';
 }
