@@ -17,8 +17,8 @@ body {
 }
 
 .app {
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   overflow: hidden;
   background: #000;
@@ -27,8 +27,8 @@ body {
 /* Левая игровая зона */
 .main-screen {
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  width: calc(100vw - 432px);
+  height: 100vh;
   overflow: hidden;
   background: #111;
 }
@@ -57,7 +57,7 @@ body {
 .pin,
 .enemy,
 .ally,
-.battlefield,
+#battlefield,
 .hp-text {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -86,11 +86,8 @@ body {
 
 /* Правая панель */
 .info-panel {
-  position: absolute;
-  right: 0;
-  top: 0;
   width: 432px;
-  height: 1080px;
+  height: 100vh;
   background: #141414;
   color: #fff;
   padding: 24px 18px;
@@ -98,8 +95,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  flex: 0 0 432px;
   overflow: hidden;
-  z-index: 20;
 }
 
 .info-image {
@@ -212,7 +209,7 @@ body {
 }
 
 /* Боевое поле */
-.battlefield {
+#battlefield {
   z-index: 1;
   width: 1920px;
   height: 1080px;
