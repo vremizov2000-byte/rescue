@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Looking for Rescue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <main class="main-screen" id="mainScreen">
+      <img class="bg" src="locations/map.png" alt="Map" />
+
+      <img id="pinAirport" class="pin" src="locations/pin_airport.png" style="display:none; left:1250px; top:711px;" />
+      <img id="pinPoor" class="pin" src="locations/pin_poor.png" style="display:none; left:1290px; top:360px;" />
+      <img id="pinFib" class="pin" src="locations/pin_fib.png" style="display:none; left:1031px; top:567px;" />
+      <img id="pinRich" class="pin" src="locations/pin_rich.png" style="display:none; left:652px; top:285px;" />
+      <img id="pinBallas" class="pin" src="locations/pin_ballas.png" style="display:none; left:1848px; top:549px;" />
+      <img id="pinCityHall" class="pin" src="locations/pin_cityhall.png" style="display:none; left:1155px; top:420px;" />
+      <img id="pinGasStation" class="pin" src="locations/pin_gasstation.png" style="display:none; left:1402px; top:420px;" />
+
+      <div class="center-title hidden" id="mainTitle">Looking for Rescue</div>
+
+      <div id="battleScreen">
+        <img id="battlefield" style="display:none; left:1000px; top:500px;" />
+
+        <img id="firstPosEnemy" class="enemy" style="display:none; left:1510px; top:600px;" />
+        <div id="firstPosEnemyHp" class="hp-text">100/100</div>
+
+        <img id="secondPosEnemy" class="enemy" style="display:none; left:1290px; top:575px;" />
+        <div id="secondPosEnemyHp" class="hp-text">100/100</div>
+
+        <img id="thirdPosEnemy" class="enemy" style="display:none; left:1400px; top:680px;" />
+        <div id="thirdPosEnemyHp" class="hp-text">100/100</div>
+
+        <img id="firstPos" class="ally" style="display:none; left:600px; top:650px;" />
+        <div id="firstPosHp" class="hp-text">100/100</div>
+
+        <img id="secondPos" class="ally" style="display:none; left:775px; top:680px;" />
+        <div id="secondPosHp" class="hp-text">100/100</div>
+
+        <img id="thirdPos" class="ally" style="display:none; left:900px; top:600px;" />
+        <div id="thirdPosHp" class="hp-text">100/100</div>
+      </div>
+
+      <div id="battleButtons"></div>
+    </main>
+
+    <aside class="info-panel">
+      <img class="info-image" id="infoImage" src="Bruno/bruno0.jpg" alt="info" />
+      <div class="info-text" id="infoText">Пропущенный звонок</div>
+
+      <div class="buttons" id="actionButtons">
+        <button class="btn" id="voiceBtn">Послушать голосовое</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="stats.js"></script>
+  <script src="battle.js"></script>
+  <script src="Team/faction.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
