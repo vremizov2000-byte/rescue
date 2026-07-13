@@ -76,6 +76,13 @@ function checkBattleEnd() {
     battleState.finished = true;
     infoText.textContent = 'Победа';
     clearButtons();
+  battlefield.style.display = 'none';
+  firstPosEnemy.style.display = 'none';
+  secondPosEnemy.style.display = 'none';
+  thirdPosEnemy.style.display = 'none';
+  firstPos.style.display = 'none';
+  secondPos.style.display = 'none';
+  thirdPos.style.display = 'none';
     clearTurnHighlight();
         setFrame(
     Number(
@@ -219,6 +226,15 @@ function initBattle() {
   battleState.attackMode = false;
   battleState.waitingForTarget = false;
   battleState.activeUnit = null;
+  document.querySelector(".bg").style.filter = "blur(8px)";
+  
+  battlefield.style.display = 'block';
+  firstPosEnemy.style.display = 'block';
+  secondPosEnemy.style.display = 'block';
+  thirdPosEnemy.style.display = 'block';
+  firstPos.style.display = 'block';
+  secondPos.style.display = 'block';
+  thirdPos.style.display = 'block';
 
   bindBattleTargets();
   updateBattleUI();
